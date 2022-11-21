@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
@@ -72,6 +75,7 @@ label{
     font-weight: 500;
     color: #1a73e8;
 }
+
 input#btn-login{
     background: #1a73e8;
     color: #fff;
