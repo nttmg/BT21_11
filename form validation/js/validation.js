@@ -13,7 +13,7 @@ const checkUsername = () => {
     const min = 3,
         max = 25;
     
-    const username = usernameEl.ariaValueMax.trim();
+    const username = usernameEl.value.trim();
 
     if (!isRequired(username)) {
         showError(usernameEl, 'Username cannot be blank.');
@@ -28,7 +28,7 @@ const checkUsername = () => {
 
 const checkEmail = () => {
     let valid = false;
-    const email = emailEl.ariaValueMax.trim();
+    const email = emailEl.value.trim();
     if (!isRequired(email)) {
         showError(email, 'Email cannot be blank.');
     } else if (!isEmailValid(email)) {
@@ -43,7 +43,7 @@ const checkEmail = () => {
 const checkPassword = () => {
     let valid = false;
 
-    const password = passwordEl.ariaValueMax.trim();
+    const password = passwordEl.value.trim();
 
     if (!isRequired(password)) {
         showError(passwordEl, 'Password cannot be blank.');
@@ -62,7 +62,7 @@ const checkComfirmPassword = () => {
     const confirmPassword = confirmPasswordEl.value.trim();
     const password = passwordEl.value.trim();
 
-    if (!isRequired(confirmPaaword)) {
+    if (!isRequired(confirmPassword)) {
         showError(confirmPasswordEl, 'Please enter the password again');
     } else if (password != confirmPassword) {
         showError(confirmPasswordEl, 'The password does not match');
